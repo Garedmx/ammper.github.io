@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.gif" />
+        <link rel="manifest" href="./manifest.json">
+        <script type="text/javascript">
+          if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js");
+          }
+        </script>
+        <title>Inicio</title>
+        <!-- FIREBASE BIBLIOTECAS -->
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+        <script src="js/key.js"></script>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Additional CSS Files -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/fontawesome.css" />
+        <link rel="stylesheet" href="assets/css/tooplate-style.css" />
+        <link rel="stylesheet" href="assets/css/owl.css" />
+        <link rel="stylesheet" href="assets/css/lightbox.css" />
+        <!-- Personal CSS Files -->
+        <link href="css/personal.css" rel="stylesheet" />
+        <!-- Personal JS Files -->
+        <script type="module" src="templates/mi-nav.js"></script>
+        <script type="module" src="templates/mi-footer.js"></script>
+        <script type="module" src="templates/mi-progreso.js"></script>
+        <script type="module" src="templates/mi-social.js"></script>
+    </head>
+    <body>
+        <form name="forma">
+            <div id="page-wraper">
+              <!-- Sidebar Menu -->
+                <div class="responsive-nav">
+                  <i class="fa fa-bars" id="menu-toggle"></i>
+                  <div id="menu" class="menu">
+                    <i class="fa fa-times" id="menu-close"></i>
+                    <div class="container">
+                      <div class="image">
+                        <a href="#"><img id="avatar" src="" alt="Avatar"></a>
+                      </div>
+                      <div id="datos_genrales" class="author-content">
+                          <output name="nombre">
+                              <mi-progreso></mi-progreso>
+                          </output>
+                          <output name="email">
+                              <mi-progreso></mi-progreso>
+                          </output>
+                      </div>
+                      <nav class="main-nav" role="navigation">
+                          <mi-nav></mi-nav>  
+                      </nav>
+                      <div class="social-network">
+                          <mi-social></mi-social> 
+                      </div>
+
+                      <div class="copyright-text">
+                          <mi-footer></mi-footer>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <section class="section about-me" data-section="section1">
+                    <div class="container">
+                        <div class="top-header">
+                                <img src="assets/images/header.jpg" alt="header" />
+                        </div>
+                        <div class="section-heading">
+
+                          <h2>INICIO</h2>
+                          <div class="line-dec"></div>
+                          <span>
+                              <p>Sistema destinado a la Consulta de Bancos y Movimientos por medio de la API de Belvo, usando su ambiente SANDBOX.</p>
+                              <p>Se realiza este proyecto para cumplir con los requerimientos solicitados en el proceso de contratación (examen practico) para la empresa AMMPER</p>
+                          </span>
+                        </div>
+                        <div class="right-image-post">
+                            <div class="row">
+
+                              <div class="col-md-8">
+                                <div class="left-text">
+                                  <h4>BELVO</h4>
+                                  <p>The easiest way to access financial data and move money in Latin America.</p>
+                                  <p>Access and enrich financial data from a multitude of sources as well as initiate payments with just a few lines of code.</p>
+                                  <div class="white-button">
+                                    <a href="https://developers.belvo.com/">Leer Mas..</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="right-image">
+                                  <img src="assets/images/belvo.png" alt="belvo" />
+                                </div>
+                              </div>
+
+                            </div>
+                        </div>
+                        <div class="left-image-post">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                  <div class="left-image">
+                                    <img src="assets/images/GitHub-Logo.png" alt="GitHub" />
+                                  </div>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="right-text">
+                                      <h4>GitHub</h4>
+                                      <p>Para este proyecto ONLINE se requiere del uso de un hosting el cual pueda almacenar la información de este portal</p>
+                                      <p>Para dicho proposito se usa el servicio proporcionado por GitHub, el cual brinda un Hosting gratuito por cada cuenta de acceso.</p>
+                                      <div class="white-button">
+                                        <a href="https://github.com/">Leer Mas..</a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </form>
+    <script type="module" src="js/Controllers/Sesion.js"></script>
+    </body>
+</html>
